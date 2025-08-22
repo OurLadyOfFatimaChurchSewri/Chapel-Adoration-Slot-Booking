@@ -10,7 +10,7 @@ body, html {
   align-items: center;
 }
 
-/* Container with semi-transparent white (liquid glass effect) */
+/* Container with semi-transparent white (liquid glass effect canned) */
 .form-container {
   background: rgba(255, 255, 255, 0.85);
   padding: 30px 40px;
