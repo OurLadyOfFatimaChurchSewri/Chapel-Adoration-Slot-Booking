@@ -1,0 +1,83 @@
+/* Full page background with church.jpg */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('assets/church.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container with semi-transparent white (liquid glass effect) */
+.form-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px 40px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #004080;
+  text-align: center;
+}
+
+/* Headings */
+h1, h2 {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+/* Labels styling */
+label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Inputs and select */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0066cc;
+}
+
+/* Confirmation message */
+#confirmation {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Hide elements with hidden class */
+.hidden {
+  display: none;
+}

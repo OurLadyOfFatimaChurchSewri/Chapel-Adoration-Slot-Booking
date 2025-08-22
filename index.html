@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Lady of Fatima Church - Adoration Booking</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Inline styles for the banner */
+    .quote-banner {
+      background-color: #004080; /* Deep blue background */
+      color: #fff; /* White text */
+      text-align: center;
+      padding: 16px 12px;
+      font-size: 1.15em;
+      font-weight: 700;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      line-height: 1.4;
+    }
+    .quote-ref {
+      display: block;
+      font-size: 0.9em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="form-container">
+
+    <!-- Banner Quote (Isaiah 43:1) -->
+    <div class="quote-banner">
+      “Thus says the LORD, He who created you, O Jacob, He who formed you, O Israel,
+      <em>Fear not, for I have redeemed you, I have called you by name, you are mine.</em>”
+      <span class="quote-ref">Isaiah 43:1</span>
+    </div>
+    <!-- End Banner -->
+
+    <h1>Our Lady of Fatima Church, Sewri</h1>
+    <div style="text-align: center; margin: 10px 0;">
+      <img src="assets/download.jpg" alt="Church Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
+    </div>
+    <h2>Adoration Slot Booking</h2>
+    <form id="bookingForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required />
+      <small style="color:#004080; display:block; margin-bottom:15px;">
+        You can book only from <strong>tomorrow onwards</strong> up to <strong>1 month in advance</strong>.
+      </small>
+
+      <label for="time">Select Time Slot:</label>
+      <select id="time" name="time" required>
+        <option value="">--Select Time--</option>
+      </select>
+
+      <small style="color:#b30000; display:block; margin:10px 0; font-weight:500;">
+        Please press the button once and wait on-screen for 10 seconds for the booking screen to reflect.
+      </small>
+
+      <button type="submit">Book Slot</button>
+    </form>
+    <div id="confirmation" class="hidden"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
