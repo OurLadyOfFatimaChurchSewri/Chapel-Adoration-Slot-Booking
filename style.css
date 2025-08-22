@@ -10,7 +10,7 @@ body, html {
   align-items: center;
 }
 
-/* Container with semi-transparent white (liquid glass effect canned) */
+/* Container with semi-transparent white (liquid glass effect) */
 .form-container {
   background: rgba(255, 255, 255, 0.85);
   padding: 30px 40px;
@@ -80,4 +80,28 @@ button:hover {
 /* Hide elements with hidden class */
 .hidden {
   display: none;
+}
+
+/* --- Mobile Optimization --- */
+@media (max-width: 768px) {
+  .quote-overlay {
+    font-size: 1.2em;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .form-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-overlay {
+    font-size: 1em;
+    line-height: 1.3;
+  }
+  .form-container {
+    width: 95%;
+    padding: 12px;
+  }
 }
