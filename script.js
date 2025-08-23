@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const payload = { name, email, date, time };
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbxiKpcK32yu7o_BWW4jSRIDXEVdropdKfaNDwAoOEu20b8YNbQ-1PQBL-8NsJePAuyFhA/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycby6DTCCQeDTR1PkYV32HqFjMQUv4Tz5UalIcWPmsqgSzwIi9Zt-WD9INLpCl-qLdfes9g/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
