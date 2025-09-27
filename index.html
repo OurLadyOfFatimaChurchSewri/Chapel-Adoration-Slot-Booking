@@ -23,41 +23,46 @@
       flex-direction: column;
       align-items: center;
       padding: 20px;
-      position: relative; /* enables absolute children */
     }
 
-    .quote-overlay {
-      position: absolute;
-      top: 50%; /* vertical center */
-      left: 50%;
-      transform: translate(-50%, -50%);
+    /* Wrapper for quote + form */
+    .center-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap; /* stack on small screens */
+      margin: auto 0;
+    }
+
+    .quote-side {
+      flex: 1;
+      min-width: 200px;
       text-align: center;
       color: #fff;
       font-family: 'Chomsky', serif;
-      font-size: 2em;
+      font-size: 1.5em;
       line-height: 1.4;
-      width: 90%;
-      max-width: 1000px;
-      z-index: 0; /* sits behind form */
-      opacity: 0.85;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    }
-    .quote-overlay .quote-ref {
-      display: block;
-      font-size: 0.7em;
-      margin-top: 8px;
       opacity: 0.9;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      padding: 10px;
     }
 
     .form-container {
-      position: relative;
-      z-index: 1; /* keeps form above quote */
       background: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 10px;
       max-width: 350px;
       width: 100%;
       text-align: center;
+      margin: 20px;
+    }
+
+    .quote-ref {
+      display: block;
+      font-size: 0.7em;
+      margin-top: 6px;
+      opacity: 0.9;
     }
 
     footer {
@@ -73,21 +78,17 @@
 
     /* Responsive Adjustments */
     @media (max-width: 768px) {
-      .quote-overlay {
-        font-size: 1.3em;
-        width: 95%;
+      .quote-side {
+        font-size: 1.1em;
+        flex: 100%;
       }
       .form-container {
         max-width: 90%;
       }
-      footer {
-        font-size: 0.8em;
-        padding: 10px;
-      }
     }
 
     @media (max-width: 480px) {
-      .quote-overlay {
+      .quote-side {
         font-size: 1em;
       }
       .form-container {
@@ -101,45 +102,50 @@
 </head>
 <body>
   <div class="background">
-    <!-- Quote floating in background -->
-    <div class="quote-overlay">
-      “Thus says the LORD, He who created you, O Jacob, He who formed you, O Israel,
-      <em>Fear not, for I have redeemed you, I have called you by name, you are mine.</em>”
-      <span class="quote-ref">Isaiah 43:1</span>
-    </div>
 
-    <!--Form in front -->
-    <div class="form-container">
-      <h1>Our Lady of Fatima Church, Sewri</h1>
-      <div style="text-align: center; margin: 10px 0;">
-        <img src="assets/download.jpg" alt="Church Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
+    <!-- Center Section (Quote + Form + Quote) -->
+    <div class="center-section">
+      <div class="quote-side">
+        “Thus says the LORD, He who created you, O Jacob, He who formed you, O Israel,
       </div>
-      <h2>Visit to the Blessed Sacrament Slot Booking</h2>
-      <form id="bookingForm">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required />
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required />
+      <div class="form-container">
+        <h1>Our Lady of Fatima Church, Sewri</h1>
+        <div style="text-align: center; margin: 10px 0;">
+          <img src="assets/download.jpg" alt="Church Image" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        </div>
+        <h2>Visit to the Blessed Sacrament Slot Booking</h2>
+        <form id="bookingForm">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="date">Select Date:</label>
-        <input type="date" id="date" name="date" required />
-        <small style="color:#004080; display:block; margin-bottom:15px;">
-          You can book only from <strong>tomorrow onwards</strong> up to <strong>1 month in advance</strong>.
-        </small>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
 
-        <label for="time">Select Time Slot:</label>
-        <select id="time" name="time" required>
-          <option value="">--Select Time--</option>
-        </select>
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" required />
+          <small style="color:#004080; display:block; margin-bottom:15px;">
+            You can book only from <strong>tomorrow onwards</strong> up to <strong>1 month in advance</strong>.
+          </small>
 
-        <small style="color:#b30000; display:block; margin:10px 0; font-weight:500;">
-          Please press the button once and wait on-screen for 10 seconds for the booking screen to reflect.
-        </small>
+          <label for="time">Select Time Slot:</label>
+          <select id="time" name="time" required>
+            <option value="">--Select Time--</option>
+          </select>
 
-        <button type="submit">Book Slot</button>
-      </form>
-      <div id="confirmation" class="hidden"></div>
+          <small style="color:#b30000; display:block; margin:10px 0; font-weight:500;">
+            Please press the button once and wait on-screen for 10 seconds for the booking screen to reflect.
+          </small>
+
+          <button type="submit">Book Slot</button>
+        </form>
+        <div id="confirmation" class="hidden"></div>
+      </div>
+
+      <div class="quote-side">
+        <em>Fear not, for I have redeemed you, I have called you by name, you are mine.</em>”
+        <span class="quote-ref">Isaiah 43:1</span>
+      </div>
     </div>
 
     <!-- Footer -->
