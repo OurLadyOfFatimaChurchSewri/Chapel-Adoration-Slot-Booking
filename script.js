@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>Date:</strong> ${date}</p>
         <p><strong>Time Slot:</strong> ${slotSelect.options[slotSelect.selectedIndex].text}</p>
         <p><strong>This is not the confirmed booking.</strong><br>
-        You will receive a confirmation email within 30 minutes based on slot availability.</p>
+        You will receive a confirmation email within 5 minutes based on slot availability.</p>
         <p>If you receive an email stating the slot is already booked, kindly book another available slot for another day.</p>
         <p>Please take a screenshot of this message for your reference.</p>
       `;
