@@ -13,6 +13,7 @@
     body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
     }
 
     .background {
@@ -32,7 +33,7 @@
       line-height: 1.4;
       max-width: 90%;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-      margin-bottom: 20px;
+      margin: 40px 0 20px 0; /* pushes quote down from top */
     }
     .quote-overlay .quote-ref {
       display: block;
@@ -50,26 +51,45 @@
       text-align: center;
     }
 
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      padding: 15px;
+      max-width: 700px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.6); /* semi-transparent black bg */
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 768px) {
       .quote-overlay {
         font-size: 1.2em; /* reduce size for smaller screens */
-        padding: 0 10px;  /* add horizontal padding */
+        padding: 0 10px;
       }
       .form-container {
-        max-width: 90%; /* shrink width to fit */
+        max-width: 90%;
         padding: 15px;
+      }
+      footer {
+        font-size: 0.8em;
+        padding: 10px;
       }
     }
 
     @media (max-width: 480px) {
       .quote-overlay {
-        font-size: 1em; /* further reduce on very small screens */
+        font-size: 1em;
         line-height: 1.3;
+        margin-top: 30px; /* still keeps quote visible */
       }
       .form-container {
         max-width: 95%;
         padding: 12px;
+      }
+      footer {
+        font-size: 0.75em;
       }
     }
   </style>
@@ -116,6 +136,13 @@
       </form>
       <div id="confirmation" class="hidden"></div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+      This initiative aims to maintain a 12-hour continuous presence before the Blessed Sacrament. 
+      Please note that everyone is most welcome to visit and pray at any point; 
+      no booking is necessary to simply come and adore.
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
